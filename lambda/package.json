@@ -1,0 +1,19 @@
+{
+  "name": "snow-report",
+  "version": "1.0.0",
+  "description": "An Alexa Skill that provides snow reports of ski fields in various locations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Alexa",
+    "Snow",
+    "Report"
+  ],
+  "author": "Peter Hanssens",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6"
+  }
+}
