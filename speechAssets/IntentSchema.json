@@ -1,0 +1,56 @@
+{
+  "intents": [
+    {
+      "intent": "NameCapture",
+      "slots": [
+        {
+          "name": "FirstName",
+          "type": "AMAZON.GB_FIRST_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "CountryCapture",
+      "slots": [
+        {
+          "name": "Country",
+          "type": "WORLD_COUNTRIES"
+        }
+      ]
+    },
+    {
+      "intent": "RegionCapture",
+      "slots": [
+        {
+          "name": "Region",
+          "type": "REGIONS"
+        }
+      ]
+    },
+    {
+      "intent": "AlexaMeetupOrganiserCheck",
+      "slots": [
+        {
+          "name": "USCity",
+          "type": "AMAZON.US_CITY"
+        },
+        {
+          "name": "EuropeanCity",
+          "type": "AMAZON.EUROPE_CITY"
+        }
+      ]
+    },
+    {
+      "intent": "AlexaMeetupNumbers"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
