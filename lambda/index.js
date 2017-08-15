@@ -15,7 +15,7 @@ exports.handler = function(event, context, callback){
 var handlers = {
 
   'NewSession': function () {
-    this.emit(':ask', 'Welcome to Voice Devs! The skill that gives you all the information about the alexa developer community. You can ask me about the various alexa meetups around the world, or listen to the alexa dev chat podcast. But first, I\'d like to get to know you better. Tell me your name by saying: My name is, and then your name.', 'Tell me your name by saying: My name is, and then your name.');
+    this.emit(':ask', 'Welcome to Wanaka! The skill that gives you all the information about the alexa developer community. You can ask me about the various alexa meetups around the world, or listen to the alexa dev chat podcast. But first, I\'d like to get to know you better. Tell me your name by saying: My name is, and then your name.', 'Tell me your name by saying: My name is, and then your name.');
   },
 
   'LaunchRequest': function () {
@@ -55,9 +55,8 @@ var handlers = {
     } else {
       this.emit(':ask', `Sorry, I didn\'t recognise that country!`, `Tell me what country you're from by saying: I'm from, and then the country you're from.`);
     }
-  },
-
   }
+
 
 
 };
