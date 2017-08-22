@@ -4,7 +4,7 @@
       "intent": "NameCapture",
       "slots": [
         {
-          "name": "FirstName",
+          "name": "UKFirstName",
           "type": "AMAZON.GB_FIRST_NAME"
         }
       ]
@@ -14,21 +14,12 @@
       "slots": [
         {
           "name": "Country",
-          "type": "WORLD_COUNTRIES"
+          "type": "LIST_OF_COUNTRIES"
         }
       ]
     },
     {
-      "intent": "RegionCapture",
-      "slots": [
-        {
-          "name": "Region",
-          "type": "REGIONS"
-        }
-      ]
-    },
-    {
-      "intent": "SkiFields"
+      "intent": "SkiFieldNumbers"
     },
     {
       "intent": "AMAZON.StopIntent"

@@ -1,7 +1,6 @@
 NameCapture my name is {UKFirstName}
 
-CountryCapture i'm from {Country}
+CountryCapture i am from {Country}
+CountryCapture im from {Country}
 
-RegionCapture i'm travelling to {Region}
-
-SkiFields how many ski fields are there
+SkiFieldNumbers how many ski fields are there
