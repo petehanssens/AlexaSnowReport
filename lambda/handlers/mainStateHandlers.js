@@ -15,7 +15,7 @@ var mainStateHandlers = Alexa.CreateStateHandler(constants.states.MAIN, {
     var userName = this.attributes['userName'];
     if (userName) {
       // Welcome User Back by Name
-      this.emit(':ask', `Welcome back ${userName}! You can ask me about the various alexa meetups around the world, or listen to the alexa dev chat podcast.`,  `What would you like to do?`);
+      this.emit(':ask', `Welcome back ${userName}! You can ask me about the various resorts, or ask me for a snow report.`,  `What would you like to do?`);
     } else {
       // Change State to Onboarding:
       this.handler.state = constants.states.ONBOARDING;
@@ -42,7 +42,7 @@ var mainStateHandlers = Alexa.CreateStateHandler(constants.states.MAIN, {
   },
 
   'AMAZON.HelpIntent' : function () {
-    this.emit(':ask', `You can ask me about the various alexa meetups around the world, or listen to the alexa dev chat podcast.`,  `What would you like to do?`);
+    this.emit(':ask', `You can ask me about the various resorts, or ask me for a snow report.`,  `What would you like to do?`);
   },
   'Unhandled' : function () {
     this.emitWithState('AMAZON.HelpIntent');

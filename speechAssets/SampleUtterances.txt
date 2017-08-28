@@ -3,4 +3,11 @@ NameCapture my name is {UKFirstName}
 CountryCapture i am from {Country}
 CountryCapture im from {Country}
 
+CityCapture i am travelling to {City}
+CityCapture im travelling to {City}
+CityCapture my holiday is in {City}
+CityCapture my holiday will be in {City}
+CityCapture i am going to {City}
+CityCapture im going to {City}
+
 SkiFieldNumbers how many ski fields are there

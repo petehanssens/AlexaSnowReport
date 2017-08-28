@@ -56,6 +56,26 @@ var onboardingStateHandlers = Alexa.CreateStateHandler(constants.states.ONBOARDI
     }
   },
 
+  'CityCapture': function () {
+    // Get Slot Values
+    var city = this.event.request.intent.slots.City.value;
+
+    // Get User Name from Session Attributes
+    var userName = this.attributes['userName'];
+
+    // Save Name in Session Attributes and Ask for Country
+    if (city) {
+      this.attributes['userCity'] = city;
+
+      // Change State to Main
+      this.handler.state = constants.states.MAIN;
+
+      this.emit(':ask', `Ok ${userName}! Your travelling to ${city}, that\'s great! You can ask me about the various resorts nearby, or ask me for a snow report.  What would you like to do?`, `What would you like to do?`);
+    } else {
+      this.emit(':ask', `Sorry, I didn\'t recognise that city!`, `Tell me what city you're travelling to by saying: I\'m from, and then the city you\'re travelling to.`);
+    }
+  },
+
   'AMAZON.StopIntent': function () {
     // State Automatically Saved with :tell
     this.emit(':tell', `Goodbye.`);
