@@ -28,6 +28,15 @@
       ]
     },
     {
+      "intent": "SkiFieldDescription",
+      "slots": [
+        {
+          "name": "Resorts",
+          "type": "RESORTS"
+        }
+      ]
+    },
+    {
       "intent": "SkiFieldNumbers"
     },
     {

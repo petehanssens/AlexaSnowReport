@@ -11,3 +11,9 @@ CityCapture i am going to {City}
 CityCapture im going to {City}
 
 SkiFieldNumbers how many ski fields are there
+
+SkiFieldDescription Tell me about {Resorts}
+SkiFieldDescription Can you describe {Resorts}
+SkiFieldDescription id like more information about {Resorts}
+SkiFieldDescription How is {Resorts} like
+SkiFieldDescription Give me more information for {Resorts}

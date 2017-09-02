@@ -28,6 +28,36 @@ var mainStateHandlers = Alexa.CreateStateHandler(constants.states.MAIN, {
     this.emit(':ask', `There are currently ${resortNumbers} in New Zealand. Would you like to hear a snow report from one of them?`, 'How else can I help you?');
   },
 
+  'SkiFieldDescription': function () {
+    // Get Slot Values
+    var resortName = this.event.request.intent.slots.Resorts.value;
+
+    // Get City
+    var resort;
+    if (resortName) {
+      city = resortName;
+    } else {
+      this.emit(':ask', 'Sorry, I didn\'t recognise that resort name.', 'How else can I help you?');
+    }
+
+    var resortMatch = '';
+    // Check for City
+    for (var i = 0; i < snowReports.length; i++) {
+      if ( snowReports[i].resort.toLowerCase() === resort.toLowerCase() ) {
+        resortMatch = snowReports[i].resort;
+        resortDescription = snowReports[i].description;
+      }
+    }
+
+    // Respond to User
+    if (resortMatch !== '') {
+      this.emit(':ask', `Here is the description for ${resort}.  ${resortDescription[0]}.`, 'How else can I help you?');
+    } else {
+      this.emit(':ask', `Sorry, looks like ${resort} doesn't have a description available!`, 'How else can I help you?');
+    }
+
+  },
+
   'AMAZON.StopIntent': function () {
     // State Automatically Saved with :tell
     this.emit(':tell', `Goodbye.`);

@@ -47,10 +47,7 @@ var onboardingStateHandlers = Alexa.CreateStateHandler(constants.states.ONBOARDI
     if (country) {
       this.attributes['userCountry'] = country;
 
-      // Change State to Main
-      this.handler.state = constants.states.MAIN;
-
-      this.emit(':ask', `Ok ${userName}! Your from ${country}, that\'s great! You can ask me about the various resorts in New Zealand, or ask me for a snow report.  What would you like to do?`, `What would you like to do?`);
+      this.emit(':ask', `Ok ${userName}! Your from ${country}, that\'s great! Tell me what city you\'re travelling to by saying: I'm travelling to, and then the city you\'re travelling to.`, `Tell me what city you\'re travelling to by saying: I\'m from, and then the city you\'re travelling to.`);
     } else {
       this.emit(':ask', `Sorry, I didn\'t recognise that country!`, `Tell me what country you're from by saying: I\'m from, and then the country you\'re from.`);
     }
@@ -72,7 +69,7 @@ var onboardingStateHandlers = Alexa.CreateStateHandler(constants.states.ONBOARDI
 
       this.emit(':ask', `Ok ${userName}! Your travelling to ${city}, that\'s great! You can ask me about the various resorts nearby, or ask me for a snow report.  What would you like to do?`, `What would you like to do?`);
     } else {
-      this.emit(':ask', `Sorry, I didn\'t recognise that city!`, `Tell me what city you're travelling to by saying: I\'m from, and then the city you\'re travelling to.`);
+      this.emit(':ask', `Sorry, I didn\'t recognise that city!`, `Tell me what city you're travelling to by saying: I\'m travelling to, and then the city you\'re travelling to.`);
     }
   },
 
